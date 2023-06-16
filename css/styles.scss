@@ -1,0 +1,94 @@
+@import "https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100&display=swap";
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Ubuntu', sans-serif;
+}
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: content-box radial-gradient(rgb(246, 220, 244), rgb(199, 114, 206));
+}
+.container{
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 30px 0;
+  .servicesBox{
+    position: relative;
+    width: 350px;
+    height: 280px;
+    background: rgb(195, 106, 119);
+    border-radius: 20px;
+    overflow: hidden;
+    .icon{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: var(--i);
+      transition: 0.5s;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 2;
+      transition-duration: 1.5s;
+      ion-icon{
+        font-size: 5rem;
+        color: #fff;
+        transition: 0.5s;
+        transition-delay: 0.5s;
+      }
+    }
+    &:hover{
+      box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.4);
+      .icon{
+      top: 30px;
+      left: calc(50% - 50px);
+      width: 80px;
+      height: 80px;
+      background: transparent;
+      border-radius: 50%;
+      transition-delay: 0s;
+      animation-delay: 0.5s;
+        ion-icon{
+          transform: scale(0.7);
+          transition-delay: 0s;
+        }
+      }
+      .content{
+        transform: scale(1);
+        transition-delay: 0.35s;
+      }
+    }
+
+  }
+  .content{
+    position: relative;
+    padding: 25px;
+    color: #fff;
+    text-align: center;
+    margin-top: 100px;
+    z-index: 1;
+    transform: scale();
+    transition: 0.5s;
+    transition-delay: 0.5s;
+    h2{
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    p{
+      font-weight: 300;
+      line-height: 1.4em;
+    }
+  }
+}
